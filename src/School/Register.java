@@ -9,7 +9,7 @@ public class Register {
     private  String email;
     private  String password;
     private String address;
-    private long phoneNo;
+    private String phoneNo;
 
     public int getId() {
         return id;
@@ -77,11 +77,31 @@ public class Register {
         this.address = address;
     }
 
-    public long getPhoneNo() {
+    public String getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(long phoneNo) {
+    public Register(int id, String firstname, String lastname, String sex, String grade, String email, String password, String address, String phoneNo) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.sex = sex;
+        this.grade = grade;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+        this.phoneNo = phoneNo;
+    }
+
+    public Register() {
+    }
+
+    public Register(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
 }

@@ -1,12 +1,18 @@
 package School;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class StudentDashB implements ConfeHigh{
+    ArrayList<Register> students = new ArrayList<>();
 
     @Override
     public void signUp(Register register) {
+        Register re = new Register(1,"Ebube","Chinda","male","SS3","chinda23@gmail.com","Masskey","No 14 sir nchelemr road","08097123432");
+        Register red = new Register(2,"Mitch","Chris","male","SS3","mtxxx23@gmail.com","Mitch","No 2 ogolo road","09087654334");
+        students.add(re);
+        students.add(red);
         Scanner input = new Scanner(System.in);
         Scanner in = new Scanner(System.in);
         Random rand = new Random();
@@ -29,12 +35,13 @@ public class StudentDashB implements ConfeHigh{
         String ads = input.nextLine();
         register.setAddress(ads);
         System.out.println("Please Enter student phone number");
-        long pno = input.nextLong();
+        String pno = input.nextLine();
         register.setPhoneNo(pno);
         System.out.println("Please Enter a password");
         String pss = in.nextLine();
         register.setPassword(pss);
         System.out.println(register.getPassword());
+        students.add(register);
 
 
         int id_random = rand.nextInt(25);
